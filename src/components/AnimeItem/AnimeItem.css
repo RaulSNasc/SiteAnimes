@@ -1,0 +1,11 @@
+.animesLista .animeItem{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animesLista .animeItem img{
+    width: 60%;
+}
