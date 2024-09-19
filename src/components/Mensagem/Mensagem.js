@@ -1,5 +1,7 @@
 import './Mensagem.css'
 
+//FUNCÇÃO DE MENSAGEM COM CHILDREN E ESTILO DIRETO DE COR
+
 function Mensagem({cor, children}) {
     return (
     <div className="mensagem">

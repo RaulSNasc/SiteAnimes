@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import FormInput from '../FormInput/FormInput';
 import './Form.css';
+//CONST PARA CRIAR UM FORMUÁRIO COM INTERAÇÃO DO CLIENTE
 const Form = () => {
     return (
         <form className="form">

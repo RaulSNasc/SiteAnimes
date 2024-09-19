@@ -1,5 +1,6 @@
 import Saudacao from '../Saudacao/saudacao';
 import './header.css';
+//CONST PARA A SEPARAÇÃO DO NOSSO COMPONENTE HEADER
 const Header = () => {
     return (
         <header className="header">

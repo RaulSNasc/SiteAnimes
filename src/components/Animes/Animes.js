@@ -1,5 +1,7 @@
 import AnimeItem from '../AnimeItem/AnimeItem'
 import './Animes.css'
+
+//CONST COM LISTA DE POSTER, NOME E ANO DOS ANIMES
 const Animes = () => {
     const anime = [
     {
@@ -33,6 +35,7 @@ const Animes = () => {
         anoLancamento:'2020'
     },
 ]
+//RETORNA PARA A CLASSE ANIMES COM OS DADOS DA LISTA
 return (
     <section class="animes">
         <h2>MINHAS RECOMENDAÇÕES: </h2>

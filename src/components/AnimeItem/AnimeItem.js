@@ -1,4 +1,5 @@
 import './AnimeItem.css';
+//ITENS SEPARANDO OS COMPONENTES DO ANIME
 const AnimeItem = ({anime}) => {
     return(
         <li className ="animeItem">

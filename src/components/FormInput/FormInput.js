@@ -1,3 +1,5 @@
+//CONST DO  INPUT DO FORMULARIO DANDO OS DADOS DE CADA ITEM
+
 const FormInput = ({inputName, ...props}) => {
 
     return(
