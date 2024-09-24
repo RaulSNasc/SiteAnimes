@@ -1,7 +1,11 @@
 //CONST PARA A UTILIZAÇÃO DO BOTÃO
-const Button = ({text, ...props}) => {
+const Button = ({text, onClick, ...props}) => {
     return (
-        <button className="button" type={props.type}>{text}</button>
+        <button className="button" type={props.type} onClick={(event)=>{
+            event.preventDefault();
+            onClick();
+
+        }}>{text}</button>
     )
 }
 

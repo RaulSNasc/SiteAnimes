@@ -1,44 +1,73 @@
+import { useEffect, useState } from 'react'
 import AnimeItem from '../AnimeItem/AnimeItem'
 import './Animes.css'
+import FormInput from '../FormInput/FormInput'
+import Button from '../Button/Button'
 
 //CONST COM LISTA DE POSTER, NOME E ANO DOS ANIMES
 const Animes = () => {
-    const anime = [
-    {
-        nome:'One Piece',
-        poster:'https://bancaconect.com.br/wp-content/uploads/2021/03/Livro-ilustrado-Oficial-One-Piece.jpg',
-        anoLancamento:'1999'
-    },
-    {
-        nome:'Naruto',
-        poster:'https://cdn.ome.lt/xvr4Ou-sVAXtty_i_PO2-7CYV4g=/fit-in/837x500/smart/uploads/conteudo/fotos/naruto-anime-poster.jpg',
-        anoLancamento:'2002'
-    },
-    {
-        nome:'Mob Psycho 100',
-        poster:'https://img.elo7.com.br/product/zoom/1EC7EE6/big-poster-do-anime-mob-psycho-100-tamanho-90x-0-cm-lo02-nerd.jpg',
-        anoLancamento:'2016'
-    },
-    { nome:'Goblin Slayer',
-        poster:'https://m.media-amazon.com/images/I/71ooQXkjbdL._AC_SL1104_.jpg',
-        anoLancamento:'2018'
+    const [anime, setAnimes] = useState([])
+
+    useEffect(() => {
+        getAnimes();
+    },[])
+   
+
+    const [animeForm, setAnimeForm] = useState({
+        nome: "",
+        poster: "",
+        anoLancamento: "",
+    })
+
+    const handleFieldsChange = (event) => {
+        setAnimeForm({
+            ...animeForm,
+            [event.target.name]: event.target.value         
+        })
+        console.log(animeForm);
         
-    },
-    {
-        nome:'Demon Slayer',
-        poster:'https://m.media-amazon.com/images/I/71r8Wf5h0+L._AC_UF1000,1000_QL80_.jpg',
-        anoLancamento:'2019'
-    },
-    {
-        nome:'Jujutsu Kaisen',
-        poster:'https://i.pinimg.com/originals/ac/43/52/ac4352f877cd4265d69538bd7532b7b3.jpg',
-        anoLancamento:'2020'
-    },
-]
+    }
+
+    const handleClick = async () => {
+      const response = await fetch('http://localhost:3005/animes', {
+        method: 'POST',
+        headers: new Headers({
+                "Content-type" : "application"
+            }),
+            body: JSON.stringify(animeForm)
+        })
+
+        const data = await response;
+        alert (` ${data.nome} cadastrado com sucesso`);
+        
+        getAnimes();
+
+        setAnimeForm({
+            nome: "",
+            poster: "",
+            anoLancamento: "",
+        })
+    }
+
+    const getAnimes = async() => {
+        //GET -Buscar as informações dos animes pré-cadastrados.
+
+        const response = await fetch('http://localhost:3005/animes')
+        const data = await response.json()
+        setAnimes(data)
+    }
+
 //RETORNA PARA A CLASSE ANIMES COM OS DADOS DA LISTA
+
 return (
-    <section class="animes">
+    <section className="animes">
         <h2>MINHAS RECOMENDAÇÕES: </h2>
+        <form className="forms">
+            <FormInput inputName="Nome" id ="nome" name="nome" type= "text" value={animeForm.nome} onChange={event => handleFieldsChange(event)}/>
+            <FormInput inputName="Poster" id ="poster" name="poster" type= "text" value={animeForm.poster} onChange={event => handleFieldsChange(event)}/>
+            <FormInput inputName="Ano de lançamento" id ="anoLancamento" name="anoLancamento" type= "text" value={animeForm.anoLancamento} onChange={event => handleFieldsChange(event)}/>
+            <Button text="Cadastrar" type="submit" onClick={handleClick}/>
+        </form>
         <ul className="animesLista">
         {anime.map((animes, index)=>  (
             <AnimeItem anime={animes} key ={index}/>       

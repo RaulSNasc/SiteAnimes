@@ -1,0 +1,52 @@
+{
+  "animes": [
+    {
+      "id": "0",
+      "nome": "One Piece",
+      "poster": "https://bancaconect.com.br/wp-content/uploads/2021/03/Livro-ilustrado-Oficial-One-Piece.jpg",
+      "anoLancamento": "1999"
+    },
+    {
+      "id": "1",
+      "nome": "Naruto",
+      "poster": "https://cdn.ome.lt/xvr4Ou-sVAXtty_i_PO2-7CYV4g=/fit-in/837x500/smart/uploads/conteudo/fotos/naruto-anime-poster.jpg",
+      "anoLancamento": "2002"
+    },
+    {
+      "id": "2",
+      "nome": "Mob Psycho 100",
+      "poster": "https://img.elo7.com.br/product/zoom/1EC7EE6/big-poster-do-anime-mob-psycho-100-tamanho-90x-0-cm-lo02-nerd.jpg",
+      "anoLancamento": "2016"
+    },
+    {
+      "id": "3",
+      "nome": "Goblin Slayer",
+      "poster": "https://m.media-amazon.com/images/I/71ooQXkjbdL._AC_SL1104_.jpg",
+      "anoLancamento": "2018"
+    },
+    {
+      "id": "4",
+      "nome": "Demon Slayer",
+      "poster": "https://m.media-amazon.com/images/I/71r8Wf5h0+L._AC_UF1000,1000_QL80_.jpg",
+      "anoLancamento": "2019"
+    },
+    {
+      "id": "5",
+      "nome": "Jujutsu Kaisen",
+      "poster": "https://i.pinimg.com/originals/ac/43/52/ac4352f877cd4265d69538bd7532b7b3.jpg",
+      "anoLancamento": "2020"
+    },
+    {
+      "id": "b09a",
+      "nome": "Berserker",
+      "poster": "https://i.pinimg.com/originals/7b/13/c9/7b13c91184b973370570a675eababe9f.jpg",
+      "anoLancamento": "1989"
+    },
+    {
+      "id": "3e78",
+      "nome": "Boku no Hero",
+      "poster": "https://uauposters.com.br/media/catalog/product/9/0/906320211216-uau-posters-boku-no-hero-academia-animes-4.jpg",
+      "anoLancamento": "2014"
+    }
+  ]
+}
