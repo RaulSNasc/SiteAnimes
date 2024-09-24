@@ -15,6 +15,8 @@ Header:
 
 Mensagem e formulário de registro dos animes:
 
+A implementação dos pôsters é feito por URL e armazenado no banco de imagens do site.
+
 ![mensagem e formulário registro](https://github.com/user-attachments/assets/f599c4e0-79e6-4bf7-bd77-2c27f16778d4)
 
 Pôsters dos animes registrados:
@@ -23,13 +25,14 @@ Pôsters dos animes registrados:
 
 Formulário de E-mail e nome:
 
+Envia e-mail para o usuário com recomendações de animes.
+
 ![formulario email](https://github.com/user-attachments/assets/019f5948-14d6-4eef-829c-9d14b8f34a0f)
 
 Rodapé:
 
 ![rodape](https://github.com/user-attachments/assets/cbdae10a-6941-4d94-a726-403763b47ba9)
 
-A implementação dos pôsters é feito por URL e armazenado no banco de imagens do site.
 
 
 
