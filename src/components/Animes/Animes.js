@@ -61,7 +61,7 @@ const Animes = () => {
 
 return (
     <section className="animes">
-        <h2>MINHAS RECOMENDAÇÕES: </h2>
+        <h2>ANIMES ASSISTIDOS: </h2>
         <form className="forms">
             <FormInput inputName="Nome" id ="nome" name="nome" type= "text" value={animeForm.nome} onChange={event => handleFieldsChange(event)}/>
             <FormInput inputName="Poster" id ="poster" name="poster" type= "text" value={animeForm.poster} onChange={event => handleFieldsChange(event)}/>
