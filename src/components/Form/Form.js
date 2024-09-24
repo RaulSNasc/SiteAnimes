@@ -4,7 +4,7 @@ import './Form.css';
 //CONST PARA CRIAR UM FORMUÁRIO COM INTERAÇÃO DO CLIENTE
 const Form = () => {
     function handleClickSubmit(){
-       console.log('Clicou no botão de formulário'); 
+       alert('E-MAIL ENVIADO'); 
     }
     return (
         <form className="form">
